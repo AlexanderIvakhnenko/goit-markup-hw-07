@@ -54,12 +54,39 @@ img {
     margin-top: 0 auto;
 }
 
+.section {
 
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+}
+
+.section .no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.link {
+    text-decoration: none;
+    display: flex;
+}
 
 .list {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    color: var(--primary-text-color);
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1, 17;
+    text-align: center;
 }
 
 
@@ -264,7 +291,7 @@ img {
 
 
 
-.hero .title {
+.hero__title {
     margin-bottom: 30px;
     margin-top: 0;
 
@@ -327,7 +354,7 @@ section no-padding*/
     padding-left: 0;
 }
 
-.feature-list-icon {
+.feature-item__icon {
     display: flex;
     height: 120px;
     justify-content: center;
@@ -340,17 +367,17 @@ section no-padding*/
     margin-bottom: 30px;
 }
 
-.feature-list .item {
+.feature-item {
     width: 270px;
 
 }
 
-.feature-list .item:not(:last-child) {
+.feature-item:not(:last-child) {
     margin-right: 30px;
 
 }
 
-.feature-list .title {
+.feature-item__title {
     margin: 0;
     margin-bottom: 10px;
 
@@ -362,7 +389,7 @@ section no-padding*/
     line-height: 1.15;
 }
 
-.feature-list .text {
+.feature-item__text {
     margin: 0;
 
     color: #757575;
@@ -391,32 +418,18 @@ section no-padding*/
     padding-bottom: 0;
 }
 
-.section.no-padding.work {
+.no-padding.work {
     padding-top: 0;
 }
 
-.section .caption {
-    margin-top: 0;
-    margin-bottom: 50px;
 
-    color: var(--primary-text-color);
-
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1, 17;
-    text-align: center;
-
-
-}
-
-
-.caption-list {
+.work-list {
     display: flex;
 
 }
 
 
-.caption-img:nth-child(2) {
+.work-list__img:nth-child(2) {
     margin-right: 30px;
     margin-left: 30px;
     /* position: relative; */
@@ -424,12 +437,12 @@ section no-padding*/
 
 /* Позиционирование - Чем мы занимаемся */
 
-.caption-img {
+.work-list__img {
     position: relative;
 
 }
 
-.text-list-work {
+.work-list__text {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -447,7 +460,7 @@ section no-padding*/
     transform: translate(-50%, -50%);
 }
 
-.caption-img::before {
+.work-list__img::before {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -465,20 +478,21 @@ section no-padding*/
 
 /* Наша команда */
 
-.section.team {
+.team {
+    display: flex;
     background-color: var(--secondary-dg-but-color);
 }
 
-.team-container {
+.team__wrapper {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.section .team {
+.team__list {
     display: flex;
 }
 
-.team .title {
+.team__subtitle {
     margin-bottom: 10px;
     margin-top: 0;
 
@@ -491,7 +505,7 @@ section no-padding*/
 
 }
 
-.team .text {
+.team__position {
     margin-top: 0;
     margin-bottom: 16px;
 
@@ -505,33 +519,39 @@ section no-padding*/
 }
 
 
-.team-worker:nth-child(-n+3) {
+.team__item:nth-child(-n+3) {
     margin-right: 30px;
 }
 
-.team-worker {
+.team__item {
     background: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
 
+/* Иконки соцсетей для команды и футера */
 
-
-/* Соцсети Команды*/
-
-.social-icon {
+.social-media {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin: 0;
+    padding-left: 0;
+
 }
 
-.list-social-icon:not(:last-child) {
+.social-media__item:not(:last-child) {
     margin-right: 10px;
 }
 
-.social-media-link {
+.social-media__link {
+    fill: currentColor;
+}
+
+/* Соцсети Команды*/
+
+
+.social-media__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -544,17 +564,12 @@ section no-padding*/
 }
 
 
-.social-media-link:hover,
-.social-media-link:focus {
+.social-media__link:hover,
+.social-media__link:focus {
     color: #FFFFFF;
-    background-color: var(--accent-color);
+    background-color: var(--primary-white-color);
     transition: color var(--animation-transition), background-color var(--animation-transition);
 }
-
-.team-social-icon {
-    fill: currentColor;
-}
-
 
 
 
