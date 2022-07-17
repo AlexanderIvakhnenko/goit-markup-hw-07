@@ -88,7 +88,7 @@ img {
 
 }
 
-.logo .second {
+.logo__second {
     color: var(--primary-text-color);
 }
 
@@ -115,16 +115,16 @@ img {
 
 }
 
-.site-nav .item {
+.site-nav__item {
     margin-right: 50px;
 }
 
-.site-nav .item:last-child {
+.site-nav__item:last-child {
     margin-right: 0;
 }
 
 
-.site-nav .link {
+.site-nav__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -141,22 +141,23 @@ img {
 
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
     color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.site-nav__link--current {
+    position: relative;
     color: var(--accent-color);
 }
 
 
-.item {
+/* .item {
     position: relative;
 }
+ */
 
-
-.link.current::after {
+.site-nav__link--current::after {
     position: absolute;
     content: '';
     display: block;
@@ -184,7 +185,7 @@ img {
 /* Иконки навигации */
 
 
-.auth-nav-link {
+.auth-nav__link {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -210,7 +211,7 @@ img {
 
 
 
-.auth-nav-icon {
+.auth-nav__icon {
     margin-right: 10px;
     fill: currentColor;
 
@@ -218,8 +219,8 @@ img {
 
 
 
-.auth-nav-link:hover,
-.auth-nav-link:focus {
+.auth-nav__link:hover,
+.auth-nav__link:focus {
     color: var(--accent-color);
 }
 
